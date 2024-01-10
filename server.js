@@ -7,7 +7,14 @@ const port = 3000;
 
 // Enable CORS for all routes
 app.use(cors());
-
+app.get('/', (req, res) => {
+  // Get the 'player' parameter from the query string
+  res.json("hello")
+});
+app.get('/test', (req, res) => {
+  // Get the 'player' parameter from the query string
+  res.json("test")
+});
 app.get('/futbin-data', (req, res) => {
   // Get the 'player' parameter from the query string
   const playerParam = req.query.player;
